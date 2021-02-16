@@ -90,7 +90,7 @@ const startTapping = (e) => {
     }, 500);
 
     tapsValue++;
-    taps.textContent = `taps: ${tapsValue}`;
+    taps.textContent = `clicks: ${tapsValue}`;
 }
 
 const render = () => {
@@ -98,7 +98,7 @@ const render = () => {
     tapArea.classList.add('show');
     setTimeout(() => {
         let perSecond = tapsValue / (timeValue / 1000);
-        tapsPerSecond.textContent = `taps per second: ${perSecond.toFixed(2)}`;
+        tapsPerSecond.textContent = `clicks per second: ${perSecond.toFixed(2)}`;
         setTimeout(() => {
             start.classList.remove('hide');
             tapArea.classList.remove('show');
@@ -117,7 +117,7 @@ const countDown = () => {
     }, 10);
 }
 const Start = () => {
-    taps.textContent = `taps: 0`;
+    taps.textContent = `clicks: 0`;
     tapsPerSecond.textContent = ``;
     tapsValue = 0;
     time = 0;

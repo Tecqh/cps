@@ -19,11 +19,18 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #3a3a3a;
 }
 
 .top {
   width: 100%;
   height: 15vh;
+}
+
+@media (max-width: 500px) {
+  .top {
+    height: 0;
+  }
 }
 
 .middle {
@@ -41,7 +48,8 @@ body {
 }
 
 .container {
-  width: 480px;
+  max-width: 480px;
+  width: 100%;
   height: 530px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,13 +71,14 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: #acacac;
+  color: gray;
 }
 
 .tap-area {
   position: relative;
   cursor: pointer;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 300px;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, right top, from(#755bea), to(#ff72c0));
@@ -118,7 +127,7 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: #acacac;
+  color: gray;
 }
 
 .taps-per-second {
@@ -126,7 +135,7 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: #acacac;
+  color: gray;
 }
 
 .bottom {
@@ -154,7 +163,7 @@ body {
 
 .chose-time {
   margin-right: 10%;
-  max-width: 250px;
+  max-width: 220px;
   width: 100%;
   height: 74px;
   display: -webkit-box;
@@ -176,13 +185,13 @@ body {
 
 .chose-time .time {
   cursor: pointer;
-  height: 74px;
-  width: 74px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   border: double 1px transparent;
   border-radius: 50%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #755bea, #ff72c0);
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #755bea, #ff72c0);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#3a3a3a)), radial-gradient(circle at top left, #755bea, #ff72c0);
+  background-image: linear-gradient(#3a3a3a, #3a3a3a), radial-gradient(circle at top left, #755bea, #ff72c0);
   background-origin: border-box;
   background-clip: content-box, border-box;
   display: -webkit-box;
@@ -197,7 +206,7 @@ body {
 }
 
 .chose-time .time span {
-  font-size: 32px;
+  font-size: 28px;
   background: -webkit-gradient(linear, left top, right top, from(#755bea), to(#ff72c0));
   background: linear-gradient(90deg, #755bea, #ff72c0);
   -webkit-background-clip: text;

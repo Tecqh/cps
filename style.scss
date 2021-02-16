@@ -9,11 +9,15 @@ body {
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    background-color: #3a3a3a;
 }
 
 .top {
     width: 100%;
     height: 15vh;
+    @media(max-width:500px) {
+        height: 0;
+    }
 }
 
 .middle {
@@ -25,7 +29,8 @@ body {
 }
 
 .container {
-    width: 480px;
+    max-width: 480px;
+    width: 100%;
     height: 530px;
     display: flex;
     flex-direction: column;
@@ -38,13 +43,14 @@ body {
     height: 50px;
     text-align: center;
     font-size: 42px;
-    color: #acacac;
+    color: gray;
 }
 
 .tap-area {
     position: relative;
     cursor: pointer;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 300px;
     border-radius: 50%;
     background: linear-gradient(90deg, #755bea, #ff72c0);
@@ -80,7 +86,7 @@ body {
     height: 50px;
     text-align: center;
     font-size: 42px;
-    color: #acacac;
+    color: gray;
 }
 
 .taps-per-second {
@@ -88,7 +94,7 @@ body {
     height: 50px;
     text-align: center;
     font-size: 42px;
-    color: #acacac;
+    color: gray;
 }
 
 .bottom {
@@ -106,12 +112,13 @@ body {
 
 .chose-time {
     margin-right: 10%;
-    max-width: 250px;
+    max-width: 220px;
     width: 100%;
     height: 74px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // border: 1px solid white;
 
     @media(max-width:500px) {
         margin-right: 0%;
@@ -119,12 +126,12 @@ body {
 
     .time {
         cursor: pointer;
-        height: 74px;
-        width: 74px;
+        height: 60px;
+        width: 60px;
         border-radius: 50%;
         border: double 1px transparent;
         border-radius: 50%;
-        background-image: linear-gradient(white, white), radial-gradient(circle at top left, #755bea, #ff72c0);
+        background-image: linear-gradient(#3a3a3a, #3a3a3a), radial-gradient(circle at top left, #755bea, #ff72c0);
         background-origin: border-box;
         background-clip: content-box, border-box;
         display: flex;
@@ -132,7 +139,7 @@ body {
         justify-content: center;
 
         span {
-            font-size: 32px;
+            font-size: 28px;
             background: linear-gradient(90deg, #755bea, #ff72c0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
