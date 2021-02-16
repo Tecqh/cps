@@ -71,7 +71,7 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: gray;
+  color: white;
 }
 
 .tap-area {
@@ -127,7 +127,7 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: gray;
+  color: white;
 }
 
 .taps-per-second {
@@ -135,7 +135,7 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: gray;
+  color: white;
 }
 
 .bottom {
