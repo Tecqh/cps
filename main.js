@@ -12,8 +12,6 @@ const timeTenSpan = document.querySelector('.time-10 span');
 const timeFifteen = document.querySelector('.time-15');
 const timeFifteenSpan = document.querySelector('.time-15 span');
 
-tapArea.classList.add('hide');
-
 let tapsValue = 0;
 let timeValue = 5000;
 let time = 0;
