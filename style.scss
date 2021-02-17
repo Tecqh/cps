@@ -9,12 +9,13 @@ body {
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    background-color: #3a3a3a;
+    background-color: #1a1919;
 }
 
 .top {
     width: 100%;
     height: 15vh;
+
     @media(max-width:500px) {
         height: 0;
     }
@@ -43,36 +44,28 @@ body {
     height: 50px;
     text-align: center;
     font-size: 42px;
-    color: white;
+    color: gray;
 }
 
+.start {
+    animation: 2s animate2 linear infinite both;
+}
+
+.start,
 .tap-area {
     position: relative;
     cursor: pointer;
-    max-width: 300px;
-    width: 100%;
+    width: 300px;
     height: 300px;
     border-radius: 50%;
     background: linear-gradient(90deg, #755bea, #ff72c0);
+    box-shadow: 0px 0px 21px #7700ff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 32px;
     color: white;
     overflow: hidden;
-}
-
-.start {
-    cursor: pointer;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(90deg, #755bea, #ff72c0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    color: white;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -86,7 +79,7 @@ body {
     height: 50px;
     text-align: center;
     font-size: 42px;
-    color: white;
+    color: gray;
 }
 
 .taps-per-second {
@@ -94,7 +87,7 @@ body {
     height: 50px;
     text-align: center;
     font-size: 42px;
-    color: white;
+    color: gray;
 }
 
 .bottom {
@@ -118,7 +111,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // border: 1px solid white;
 
     @media(max-width:500px) {
         margin-right: 0%;
@@ -131,7 +123,7 @@ body {
         border-radius: 50%;
         border: double 1px transparent;
         border-radius: 50%;
-        background-image: linear-gradient(#3a3a3a, #3a3a3a), radial-gradient(circle at top left, #755bea, #ff72c0);
+        background-image: linear-gradient(#1a1919, #1a1919), radial-gradient(circle at top left, #755bea, #ff72c0);
         background-origin: border-box;
         background-clip: content-box, border-box;
         display: flex;
@@ -150,16 +142,9 @@ body {
             -ms-user-select: none;
             user-select: none;
         }
-
-        .timeSpanColorChange {
-            background: linear-gradient(white);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     }
-
     .timeBgcChange {
-        background-image: linear-gradient(90deg, #755bea, #ff72c0);
+        animation: 2s animate2 linear infinite both;
     }
 }
 
@@ -173,6 +158,7 @@ body {
 
 .change-size {
     transform: scale(0.95);
+    box-shadow: 0px 0px 61px #7700ff;
 }
 
 .animation {
@@ -196,5 +182,20 @@ body {
     100% {
         width: 1000px;
         height: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        box-shadow: 0px 0px 21px #7700ff;
+    }
+
+    50% {
+        box-shadow: 0px 0px 71px #7700ff;
+    }
+
+    100% {
+        box-shadow: 0px 0px 21px #7700ff;
+
     }
 }

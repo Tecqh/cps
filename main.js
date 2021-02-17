@@ -22,7 +22,7 @@ let flagFive = true;
 let flagTen = true;
 let flagFifteen = true;
 
-timeFive.addEventListener('click', () => {
+const timeFiveFunc = () => {
     timeValue = 5000;
     timeLeft.textContent = "5.00";
     flagFifteen = false;
@@ -38,9 +38,11 @@ timeFive.addEventListener('click', () => {
         timeFive.classList.add('timeBgcChange');
         timeFiveSpan.classList.add('timeSpanColorChange');
     }
-})
+}
+timeFiveFunc();
+timeFive.addEventListener('click', timeFiveFunc);
 
-timeTen.addEventListener('click', () => {
+const timeTenFunc = () => {
     timeValue = 10000;
     timeLeft.textContent = "10.00";
     flagFifteen = false;
@@ -56,9 +58,10 @@ timeTen.addEventListener('click', () => {
         timeTen.classList.add('timeBgcChange');
         timeTenSpan.classList.add('timeSpanColorChange');
     }
-})
+}
+timeTen.addEventListener('click', timeTenFunc)
 
-timeFifteen.addEventListener('click', () => {
+const timeFifteenFunc = () => {
     timeValue = 15000;
     timeLeft.textContent = "15.00";
     flagFive = false;
@@ -74,7 +77,8 @@ timeFifteen.addEventListener('click', () => {
         timeFifteen.classList.add('timeBgcChange');
         timeFifteenSpan.classList.add('timeSpanColorChange');
     }
-})
+}
+timeFifteen.addEventListener('click', timeFifteenFunc);
 
 const startTapping = (e) => {
     let x = e.clientX - e.target.offsetLeft;
@@ -110,12 +114,21 @@ const countDown = () => {
     const idInterval = setInterval(() => {
         time++
         timeLeft.textContent = (time / 100).toFixed(2);
+        timeFive.removeEventListener('click', timeFiveFunc);
+        timeTen.removeEventListener('click', timeTenFunc);
+        timeFifteen.removeEventListener('click', timeFifteenFunc);
+
         if ((time * 10) === timeValue) {
             window.clearInterval(idInterval);
             tapArea.removeEventListener("click", startTapping);
+            timeFive.addEventListener('click', timeFiveFunc);
+            timeTen.addEventListener('click', timeTenFunc)
+            timeFifteen.addEventListener('click', timeFifteenFunc);
         }
+
     }, 10);
 }
+
 const Start = () => {
     taps.textContent = `clicks: 0`;
     tapsPerSecond.textContent = ``;

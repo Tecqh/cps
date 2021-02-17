@@ -19,7 +19,7 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #3a3a3a;
+  background-color: #1a1919;
 }
 
 .top {
@@ -71,18 +71,25 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: white;
+  color: gray;
 }
 
+.start {
+  -webkit-animation: 2s animate2 linear infinite both;
+          animation: 2s animate2 linear infinite both;
+}
+
+.start,
 .tap-area {
   position: relative;
   cursor: pointer;
-  max-width: 300px;
-  width: 100%;
+  width: 300px;
   height: 300px;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, right top, from(#755bea), to(#ff72c0));
   background: linear-gradient(90deg, #755bea, #ff72c0);
+  -webkit-box-shadow: 0px 0px 21px #7700ff;
+          box-shadow: 0px 0px 21px #7700ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,26 +102,6 @@ body {
   font-size: 32px;
   color: white;
   overflow: hidden;
-}
-
-.start {
-  cursor: pointer;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: -webkit-gradient(linear, left top, right top, from(#755bea), to(#ff72c0));
-  background: linear-gradient(90deg, #755bea, #ff72c0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 32px;
-  color: white;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -127,7 +114,7 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: white;
+  color: gray;
 }
 
 .taps-per-second {
@@ -135,7 +122,7 @@ body {
   height: 50px;
   text-align: center;
   font-size: 42px;
-  color: white;
+  color: gray;
 }
 
 .bottom {
@@ -190,8 +177,8 @@ body {
   border-radius: 50%;
   border: double 1px transparent;
   border-radius: 50%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#3a3a3a)), radial-gradient(circle at top left, #755bea, #ff72c0);
-  background-image: linear-gradient(#3a3a3a, #3a3a3a), radial-gradient(circle at top left, #755bea, #ff72c0);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a1919), to(#1a1919)), radial-gradient(circle at top left, #755bea, #ff72c0);
+  background-image: linear-gradient(#1a1919, #1a1919), radial-gradient(circle at top left, #755bea, #ff72c0);
   background-origin: border-box;
   background-clip: content-box, border-box;
   display: -webkit-box;
@@ -218,16 +205,9 @@ body {
   user-select: none;
 }
 
-.chose-time .time .timeSpanColorChange {
-  background: -webkit-gradient(linear, left top, left bottom, from(white));
-  background: linear-gradient(white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .chose-time .timeBgcChange {
-  background-image: -webkit-gradient(linear, left top, right top, from(#755bea), to(#ff72c0));
-  background-image: linear-gradient(90deg, #755bea, #ff72c0);
+  -webkit-animation: 2s animate2 linear infinite both;
+          animation: 2s animate2 linear infinite both;
 }
 
 .hide {
@@ -241,6 +221,8 @@ body {
 .change-size {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+  -webkit-box-shadow: 0px 0px 61px #7700ff;
+          box-shadow: 0px 0px 61px #7700ff;
 }
 
 .animation {
@@ -276,6 +258,36 @@ body {
   100% {
     width: 1000px;
     height: 1000px;
+  }
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    -webkit-box-shadow: 0px 0px 21px #7700ff;
+            box-shadow: 0px 0px 21px #7700ff;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 71px #7700ff;
+            box-shadow: 0px 0px 71px #7700ff;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 21px #7700ff;
+            box-shadow: 0px 0px 21px #7700ff;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    -webkit-box-shadow: 0px 0px 21px #7700ff;
+            box-shadow: 0px 0px 21px #7700ff;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 71px #7700ff;
+            box-shadow: 0px 0px 71px #7700ff;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 21px #7700ff;
+            box-shadow: 0px 0px 21px #7700ff;
   }
 }
 /*# sourceMappingURL=style.css.map */
